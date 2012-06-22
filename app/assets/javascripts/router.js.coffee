@@ -20,7 +20,10 @@ EmberApp.Router = Ember.Router.extend
       show: Ember.Route.extend
         route: '/:product_id'
         connectOutlets: (router, product) ->
-          console.log "hi from connectOutlet"
-          router.get('productsListController').connectOutlet('productShow', EmberApp.Product.find(product.get("id")))
+          unless EmberApp.getPath("router.applicationController.view")
+            console.log "OH NOES!  No main view!  Setting it ourselves ..."
+            router.get('applicationController').connectOutlet('productsList', EmberApp.Product.findAll())
+          router.get('productsListController').connectOutlet('productShow', product)
 
-EmberApp.initialize()
+$ ->
+  EmberApp.initialize()
