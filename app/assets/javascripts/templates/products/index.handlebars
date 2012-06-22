@@ -1,5 +1,7 @@
+<h1>Listing Products</h1>
 <ul>
   {{#each controller}}
     <li><a {{action showProduct}}>{{title}}</a></li>
   {{/each}}
 </ul>
+{{ outlet }}

@@ -9,10 +9,11 @@ EmberApp.Product.reopenClass
 
 EmberApp.ApplicationController = Ember.ArrayController.extend()
 EmberApp.ProductsListController = Ember.ArrayController.extend()
-#EmberApp.ProductShowController = Ember.ObjectController.extend()
+EmberApp.ProductShowController = Ember.ObjectController.extend
+  store: EmberApp.store
 
-#EmberApp.ProductShowView = Ember.View.extend
-#  templateName: 'products/show'
+EmberApp.ProductShowView = Ember.View.extend
+  templateName: 'products/show'
 
 EmberApp.ProductsListView = Ember.View.extend
   templateName: 'products/index'
