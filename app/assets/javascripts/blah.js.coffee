@@ -1,4 +1,7 @@
-EmberApp.Product = DS.Model.extend()
+EmberApp.Product = DS.Model.extend
+  title: DS.attr('string')
+  description: DS.attr('string')
+  price: DS.attr('number')
 
 EmberApp.Product.reopenClass
   findAll: ->
