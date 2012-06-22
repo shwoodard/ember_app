@@ -15,6 +15,10 @@
 //= require vendor/handlebars
 //= require vendor/ember
 //= require vendor/ember-data
-//= require_tree ./templates
 //= require app
+//= require store
+//= require blah
+//= require router
+//= require_tree ./models
+//= require_tree ./templates
 //= require_tree .
